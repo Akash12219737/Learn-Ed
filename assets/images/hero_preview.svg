@@ -1,0 +1,29 @@
+
+    <svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="jsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#1E1B4B" />
+          <stop offset="50%" stop-color="#311042" />
+          <stop offset="100%" stop-color="#0F172A" />
+        </linearGradient>
+        <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#FBBF24" />
+          <stop offset="100%" stop-color="#F59E0B" />
+        </linearGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#jsGrad)" />
+      <path d="M 0 50 L 800 50 M 0 100 L 800 100 M 0 150 L 800 150 M 0 200 L 800 200 M 0 250 L 800 250 M 0 300 L 800 300 M 0 350 L 800 350 M 0 400 L 800 400" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+      <path d="M 100 0 L 100 450 M 200 0 L 200 450 M 300 0 L 300 450 M 400 0 L 400 450 M 500 0 L 500 450 M 600 0 L 600 450 M 700 0 L 700 450" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+      
+      <circle cx="650" cy="225" r="120" fill="none" stroke="rgba(245, 158, 11, 0.1)" stroke-width="2" />
+      <circle cx="650" cy="225" r="160" fill="none" stroke="rgba(245, 158, 11, 0.05)" stroke-width="1" />
+      
+      <rect x="580" y="155" width="140" height="140" rx="24" fill="url(#accentGrad)" />
+      <text x="650" y="245" font-family="sans-serif" font-weight="900" font-size="75" fill="#111" text-anchor="middle">JS</text>
+      
+      <text x="60" y="180" font-family="sans-serif" font-weight="800" font-size="44" fill="#FFF">JavaScript</text>
+      <text x="60" y="240" font-family="sans-serif" font-weight="800" font-size="44" fill="url(#accentGrad)">Essentials</text>
+      <text x="60" y="300" font-family="sans-serif" font-weight="500" font-size="18" fill="#94A3B8">Level: Beginner  |  Duration: 6 Hours</text>
+      <text x="60" y="380" font-family="sans-serif" font-size="14" fill="#64748B">// Complete Guide to Variables, DOM, and Scope</text>
+    </svg>
+  

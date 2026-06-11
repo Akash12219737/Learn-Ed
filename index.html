@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Learn-Ed | Premium E-Learning & Assessment Platform</title>
+  <meta name="description" content="Master development, design, and business skills with Learn-Ed. Experience interactive courses, live quizzes, gamified progress dashboards, and earn certificates.">
+  <meta name="keywords" content="e-learning, online courses, javascript, development, UI/UX, assessment, gamified learning, web development">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Learn-Ed | Premium E-Learning & Assessment Platform">
+  <meta property="og:description" content="Master development, design, and business skills with interactive courses, gamified dashboards, and certified assessments.">
+  <meta property="og:image" content="assets/images/hero_preview.svg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Learn-Ed | Premium E-Learning & Assessment">
+  <meta property="twitter:description" content="Master coding, design, and business. Gamified student tracking & assessment system.">
+  <meta property="twitter:image" content="assets/images/hero_preview.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>🚀 Welcome to Learn-Ed 2.0! Enroll today and get 25% off all premium tracks. Use code: <span>LEARNED25</span></p>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="app-header">
+    <div class="header-container">
+      <a href="#landing" class="logo" id="logo-link">
+        <span class="logo-icon"><i data-lucide="graduation-cap"></i></span>
+        <span class="logo-text">Learn-Ed</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#landing" class="nav-link active" data-view="landing"><i data-lucide="home"></i> Home</a>
+        <a href="#courses" class="nav-link" data-view="courses"><i data-lucide="book-open"></i> Courses</a>
+        <a href="#dashboard" class="nav-link" data-view="dashboard" id="nav-dashboard"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+        <a href="#quiz" class="nav-link" data-view="quiz"><i data-lucide="award"></i> Certify</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle light/dark theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+
+        <!-- User Profile Quick View -->
+        <div class="header-profile" id="header-profile-menu">
+          <img src="assets/images/avatar_placeholder.svg" alt="User Avatar" class="header-avatar" id="header-avatar">
+          <div class="profile-tooltip">
+            <span class="tooltip-name" id="tooltip-user-name">Alex Morgan</span>
+            <span class="tooltip-xp" id="tooltip-user-xp">1,250 XP</span>
+            <div class="tooltip-divider"></div>
+            <a href="#dashboard" class="tooltip-link">My Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="icon-btn mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#landing" class="mobile-nav-link active" data-view="landing"><i data-lucide="home"></i> Home</a>
+    <a href="#courses" class="mobile-nav-link" data-view="courses"><i data-lucide="book-open"></i> Courses</a>
+    <a href="#dashboard" class="mobile-nav-link" data-view="dashboard"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+    <a href="#quiz" class="mobile-nav-link" data-view="quiz"><i data-lucide="award"></i> Certify</a>
+  </div>
+
+  <!-- Main View Container -->
+  <main class="app-main">
+
+    <!-- 1. LANDING VIEW -->
+    <section id="view-landing" class="view-section active">
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <div class="hero-container">
+          <div class="hero-content">
+            <div class="badge-pill">
+              <span class="badge-dot"></span> Elevating Future Tech Leaders
+            </div>
+            <h1>Learn. Code. <span class="gradient-text">Excel.</span></h1>
+            <p class="hero-subtitle">
+              Join a modern, gamified classroom designed to fast-track your tech career. Build real-world projects, earn certified badges, and learn from industry experts.
+            </p>
+            <div class="hero-actions">
+              <a href="#courses" class="btn btn-primary btn-lg">Explore Courses <i data-lucide="arrow-right"></i></a>
+              <a href="#quiz" class="btn btn-secondary btn-lg">Take Assessment</a>
+            </div>
+            <div class="hero-social-proof">
+              <div class="avatar-group">
+                <img src="assets/images/student_1.svg" alt="Student 1">
+                <img src="assets/images/student_2.svg" alt="Student 2">
+                <img src="assets/images/student_3.svg" alt="Student 3">
+                <div class="avatar-more">+4.8k</div>
+              </div>
+              <p>Trusted by over <strong>50,000+</strong> students globally</p>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-card-glowing">
+              <img src="assets/images/hero_banner.png" alt="Learn-Ed Interactive Workspace" class="hero-image">
+              <!-- Floating Glass Cards -->
+              <div class="floating-card top-left">
+                <span class="fc-icon cyan"><i data-lucide="activity"></i></span>
+                <div class="fc-info">
+                  <span class="fc-title">Live Tracking</span>
+                  <span class="fc-value">XP Updates Instant</span>
+                </div>
+              </div>
+              <div class="floating-card bottom-right">
+                <span class="fc-icon violet"><i data-lucide="award"></i></span>
+                <div class="fc-info">
+                  <span class="fc-title">Verification</span>
+                  <span class="fc-value">Verified Credentials</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <section class="stats-section">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-icon"><i data-lucide="users"></i></span>
+            <div class="stat-details">
+              <h3 class="stat-number" data-target="52000">0</h3>
+              <p class="stat-label">Active Learners</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon"><i data-lucide="video"></i></span>
+            <div class="stat-details">
+              <h3 class="stat-number" data-target="180">0</h3>
+              <p class="stat-label">Premium Courses</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon"><i data-lucide="award"></i></span>
+            <div class="stat-details">
+              <h3 class="stat-number" data-target="32000">0</h3>
+              <p class="stat-label">Certificates Issued</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon"><i data-lucide="smile"></i></span>
+            <div class="stat-details">
+              <h3 class="stat-number" data-target="98">0</h3>
+              <p class="stat-label">Satisfaction Rate (%)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Grid -->
+      <section class="features-section">
+        <div class="section-header">
+          <h2>Why Study with <span class="gradient-text">Learn-Ed</span>?</h2>
+          <p>We combine premium production-grade content with advanced learning dynamics.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <span class="feature-icon"><i data-lucide="sparkles"></i></span>
+            <h3>Interactive Playground</h3>
+            <p>Write, run, and debug your code in real-time as you progress through video modules.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon"><i data-lucide="gamepad-2"></i></span>
+            <h3>Gamified Dashboard</h3>
+            <p>Earn XP, level up your profile, unlock achievements, and climb local leaderboards.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon"><i data-lucide="database"></i></span>
+            <h3>Offline Code Sync</h3>
+            <p>Automatic saving of your notes and coding progress, completely synced in real-time.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon"><i data-lucide="terminal"></i></span>
+            <h3>Industry Instructors</h3>
+            <p>Learn from engineers and UI designers currently working in world-class tech firms.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials-section">
+        <div class="section-header">
+          <h2>Loved by <span class="gradient-text">Thousands</span></h2>
+          <p>Here's what our graduate alumni say about their experience.</p>
+        </div>
+        <div class="testimonial-slider-container">
+          <div class="testimonial-slider" id="testimonial-slider">
+            <!-- Testimonial Slides will be populated in app.js or hardcoded -->
+            <div class="testimonial-slide active">
+              <div class="testimonial-rating">
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+              </div>
+              <p class="testimonial-text">"The coding sandbox integrated directly alongside the video panels made this the best Javascript course I have ever taken. The gamified dashboard kept me super motivated!"</p>
+              <div class="testimonial-user">
+                <img src="assets/images/student_1.svg" alt="Jane Doe">
+                <div class="user-info">
+                  <span class="user-name">Sarah Jenkins</span>
+                  <span class="user-role">Frontend Dev at Vercel</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn prev-btn" id="testimonial-prev" aria-label="Previous Testimonial"><i data-lucide="chevron-left"></i></button>
+            <button class="slider-btn next-btn" id="testimonial-next" aria-label="Next Testimonial"><i data-lucide="chevron-right"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Plans -->
+      <section class="pricing-section">
+        <div class="section-header">
+          <h2>Flexible Plans for <span class="gradient-text">Every Goal</span></h2>
+          <p>Start with a free trial and upgrade as you grow.</p>
+          <div class="pricing-toggle-container">
+            <span class="toggle-label active" id="billing-monthly">Monthly</span>
+            <button class="pricing-toggle-btn" id="billing-toggle" aria-label="Toggle monthly or annual billing">
+              <span class="toggle-circle"></span>
+            </button>
+            <span class="toggle-label" id="billing-annual">Annual <span class="discount-badge">Save 20%</span></span>
+          </div>
+        </div>
+        <div class="pricing-grid">
+          <!-- Free Plan -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Starter</h3>
+              <p>Ideal for beginners exploring the platform.</p>
+              <div class="price-container">
+                <span class="currency">$</span>
+                <span class="price-amount" data-monthly="0" data-annual="0">0</span>
+                <span class="price-period">/mo</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li><i data-lucide="check" class="check-icon"></i> Access to all free courses</li>
+              <li><i data-lucide="check" class="check-icon"></i> Interactive web code sandbox</li>
+              <li><i data-lucide="check" class="check-icon"></i> Dynamic XP tracking</li>
+              <li class="disabled"><i data-lucide="x" class="x-icon"></i> Certified credentials</li>
+              <li class="disabled"><i data-lucide="x" class="x-icon"></i> 1-on-1 code mentorship</li>
+            </ul>
+            <a href="#courses" class="btn btn-secondary w-full">Start Learning</a>
+          </div>
+
+          <!-- Pro Plan (Popular) -->
+          <div class="pricing-card popular">
+            <div class="popular-ribbon">Most Popular</div>
+            <div class="pricing-header">
+              <h3>All-Access Pro</h3>
+              <p>Unlock complete access to advanced pathways.</p>
+              <div class="price-container">
+                <span class="currency">$</span>
+                <span class="price-amount" data-monthly="29" data-annual="23">29</span>
+                <span class="price-period">/mo</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li><i data-lucide="check" class="check-icon"></i> 180+ Premium courses</li>
+              <li><i data-lucide="check" class="check-icon"></i> Shareable verified certificates</li>
+              <li><i data-lucide="check" class="check-icon"></i> Downloadable course projects</li>
+              <li><i data-lucide="check" class="check-icon"></i> Priority community support</li>
+              <li class="disabled"><i data-lucide="x" class="x-icon"></i> 1-on-1 code mentorship</li>
+            </ul>
+            <button class="btn btn-primary w-full purchase-btn" data-plan="Pro">Upgrade to Pro</button>
+          </div>
+
+          <!-- Enterprise Plan -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Team/Enterprise</h3>
+              <p>Build skills across your entire engineering team.</p>
+              <div class="price-container">
+                <span class="currency">$</span>
+                <span class="price-amount" data-monthly="99" data-annual="79">99</span>
+                <span class="price-period">/mo</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li><i data-lucide="check" class="check-icon"></i> Unlimited seat management</li>
+              <li><i data-lucide="check" class="check-icon"></i> Custom learning pathways</li>
+              <li><i data-lucide="check" class="check-icon"></i> Advanced team telemetry & metrics</li>
+              <li><i data-lucide="check" class="check-icon"></i> Dedicated 1-on-1 code reviews</li>
+              <li><i data-lucide="check" class="check-icon"></i> Enterprise SLA & custom billing</li>
+            </ul>
+            <button class="btn btn-secondary w-full contact-sales-btn">Contact Sales</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="newsletter-section">
+        <div class="newsletter-card">
+          <div class="newsletter-content">
+            <h2>Ready to Level Up Your Skills?</h2>
+            <p>Subscribe to our newsletter for weekly guides, code challenges, and exclusive discounts.</p>
+          </div>
+          <form class="newsletter-form" id="newsletter-form">
+            <div class="form-group-inline">
+              <div class="input-container">
+                <i data-lucide="mail" class="input-icon"></i>
+                <input type="email" id="newsletter-email" placeholder="Enter your email address" required aria-label="Email address">
+              </div>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+            <span class="form-message" id="newsletter-message"></span>
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <!-- 2. COURSES CATALOG VIEW -->
+    <section id="view-courses" class="view-section">
+      <div class="view-header">
+        <div class="header-info">
+          <h1>Explore <span class="gradient-text">Our Courses</span></h1>
+          <p>Find the perfect course to advance your skills. Search, filter, and track progress.</p>
+        </div>
+      </div>
+
+      <!-- Search and Filter Panel -->
+      <div class="catalog-panel">
+        <div class="search-box">
+          <i data-lucide="search" class="search-icon"></i>
+          <input type="text" id="course-search-input" placeholder="Search by title, topic, or instructor...">
+        </div>
+        <div class="filter-actions">
+          <div class="category-tabs" id="category-tabs">
+            <button class="tab-btn active" data-category="all">All Courses</button>
+            <button class="tab-btn" data-category="development">Development</button>
+            <button class="tab-btn" data-category="design">Design</button>
+            <button class="tab-btn" data-category="business">Business</button>
+          </div>
+          <div class="select-wrapper">
+            <select id="course-sort-select" aria-label="Sort courses">
+              <option value="popular">Most Popular</option>
+              <option value="newest">Newest First</option>
+              <option value="difficulty-asc">Difficulty: Easy to Hard</option>
+              <option value="difficulty-desc">Difficulty: Hard to Easy</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course Cards Grid -->
+      <div class="courses-grid" id="courses-grid-container">
+        <!-- Rendered dynamically via app.js -->
+      </div>
+    </section>
+
+    <!-- 3. STUDENT DASHBOARD VIEW -->
+    <section id="view-dashboard" class="view-section">
+      <div class="view-header">
+        <h1>Welcome Back, <span class="gradient-text" id="dashboard-user-name">Alex Morgan</span></h1>
+        <p>Keep track of your XP, earned credentials, and course milestones.</p>
+      </div>
+
+      <!-- Dashboard Overview Panels -->
+      <div class="dashboard-overview-grid">
+        <!-- Profile Panel -->
+        <div class="dashboard-panel profile-summary">
+          <div class="profile-header-large">
+            <img src="assets/images/avatar_placeholder.svg" alt="User Avatar" class="profile-avatar-large" id="dashboard-avatar">
+            <div class="profile-details-large">
+              <h2 id="dashboard-fullname">Alex Morgan</h2>
+              <p class="profile-title">Tech Learner Elite</p>
+              <div class="level-indicator">
+                <span class="badge badge-lvl" id="dashboard-user-level">Level 5</span>
+                <span class="user-xp-detail" id="dashboard-user-xp-progress">1,250 / 2,000 XP</span>
+              </div>
+            </div>
+          </div>
+          <div class="xp-progress-bar-container">
+            <div class="xp-progress-bar-fill" id="dashboard-xp-progress-fill" style="width: 62.5%"></div>
+          </div>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div class="dashboard-metrics">
+          <div class="metric-card">
+            <span class="metric-icon cyan"><i data-lucide="book-open"></i></span>
+            <div class="metric-data">
+              <h3 id="metric-enrolled-count">3</h3>
+              <p>Courses In Progress</p>
+            </div>
+          </div>
+          <div class="metric-card">
+            <span class="metric-icon violet"><i data-lucide="check-circle-2"></i></span>
+            <div class="metric-data">
+              <h3 id="metric-completed-count">1</h3>
+              <p>Completed Tracks</p>
+            </div>
+          </div>
+          <div class="metric-card animate-pulse">
+            <span class="metric-icon amber"><i data-lucide="award"></i></span>
+            <div class="metric-data">
+              <h3 id="metric-certificates-count">1</h3>
+              <p>Certificates Earned</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two Column Layout: Current Courses & Achievements -->
+      <div class="dashboard-two-col">
+        <!-- In Progress Courses -->
+        <div class="dashboard-column flex-2">
+          <h2 class="column-title">My Learning Paths</h2>
+          <div class="enrolled-courses-list" id="dashboard-enrolled-list">
+            <!-- Rendered dynamically via app.js -->
+          </div>
+        </div>
+
+        <!-- Badges & Achievements -->
+        <div class="dashboard-column flex-1">
+          <h2 class="column-title">Achievements</h2>
+          <div class="achievements-card">
+            <div class="badge-grid" id="dashboard-badges-grid">
+              <!-- Dynamic Badges -->
+            </div>
+            <div class="certificate-section">
+              <h3>Earned Credentials</h3>
+              <div class="certificate-list" id="dashboard-certificates-list">
+                <!-- Cert list -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ACTIVE LEARNING DASHBOARD (CLASSROOM) -->
+    <section id="view-learning" class="view-section">
+      <div class="learning-header">
+        <a href="#dashboard" class="btn btn-text back-btn"><i data-lucide="arrow-left"></i> Back to Dashboard</a>
+        <h1 id="learning-course-title">Mastering JavaScript Essentials</h1>
+      </div>
+
+      <div class="classroom-layout">
+        <!-- Left: Classroom Content Player -->
+        <div class="classroom-main">
+          <!-- Video Player Mockup -->
+          <div class="video-player-container">
+            <div class="video-overlay" id="video-overlay">
+              <button class="video-play-btn" id="classroom-video-play-btn" aria-label="Play video"><i data-lucide="play"></i></button>
+              <p class="video-overlay-text">Video Mock Player (Click to Simulate Completion)</p>
+            </div>
+            <div class="video-placeholder-bg"></div>
+            <!-- Custom Video Controls bar -->
+            <div class="video-controls">
+              <button class="controls-btn" id="classroom-play-toggle" aria-label="Toggle play"><i data-lucide="play"></i></button>
+              <div class="video-progress-container">
+                <div class="video-progress-fill" id="classroom-video-progress" style="width: 0%"></div>
+              </div>
+              <span class="video-time" id="classroom-video-time">0:00 / 8:45</span>
+              <button class="controls-btn" id="classroom-fullscreen" aria-label="Toggle fullscreen"><i data-lucide="maximize"></i></button>
+            </div>
+          </div>
+
+          <!-- Lesson Tabs navigation -->
+          <div class="lesson-tabs">
+            <button class="lesson-tab-btn active" data-tab="overview">Overview</button>
+            <button class="lesson-tab-btn" data-tab="curriculum">Curriculum</button>
+            <button class="lesson-tab-btn" data-tab="notes">My Notes</button>
+          </div>
+
+          <!-- Lesson Tab Contents -->
+          <div class="lesson-tab-content active" id="ltab-overview">
+            <h3 class="tab-header-title">About this Module</h3>
+            <p id="learning-course-desc">Learn key variables, data structures, control flow loops, arrays, and standard higher-order function operations in Modern ES6+ JavaScript.</p>
+            <div class="learning-outcomes">
+              <h4>What you will build:</h4>
+              <ul>
+                <li><i data-lucide="check-circle" class="check-icon"></i> A responsive custom DOM landing calculator</li>
+                <li><i data-lucide="check-circle" class="check-icon"></i> Asynchronous API weather widgets</li>
+                <li><i data-lucide="check-circle" class="check-icon"></i> Advanced state-managed local quiz app</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lesson-tab-content" id="ltab-curriculum">
+            <h3>Module Curriculum</h3>
+            <div class="curriculum-accordion" id="learning-curriculum-list">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <div class="lesson-tab-content" id="ltab-notes">
+            <h3>My Study Notes</h3>
+            <p>Write your thoughts or compile core code snippets here. Saved locally in your browser storage.</p>
+            <div class="notes-editor-container">
+              <textarea id="notes-textarea" placeholder="Start typing notes..." aria-label="Course Notes Text Area"></textarea>
+              <div class="notes-actions">
+                <span class="notes-status-text" id="notes-save-status">All changes saved locally</span>
+                <button class="btn btn-primary btn-sm" id="notes-save-btn">Force Save Notes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Classroom Lectures Sidebar -->
+        <aside class="classroom-sidebar">
+          <div class="sidebar-header">
+            <h3>Course Index</h3>
+            <span class="course-completion-pct" id="learning-sidebar-progress">33% Complete</span>
+          </div>
+          <div class="sidebar-progress-bar">
+            <div class="sidebar-progress-fill" id="learning-sidebar-progress-fill" style="width: 33%"></div>
+          </div>
+          <div class="lecture-list" id="learning-lecture-list">
+            <!-- Dynamic Lectures List -->
+          </div>
+          <div class="sidebar-footer">
+            <button class="btn btn-primary w-full" id="classroom-take-quiz-btn"><i data-lucide="award"></i> Take Course Quiz</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 5. ASSESSMENT & QUIZ CERTIFICATION VIEW -->
+    <section id="view-quiz" class="view-section">
+      <div class="view-header">
+        <h1>Learn-Ed <span class="gradient-text">Certification Center</span></h1>
+        <p>Assess your skills, get verified credentials, and export your certificate to LinkedIn.</p>
+      </div>
+
+      <div class="quiz-container-box">
+        <!-- Quiz Intro State -->
+        <div id="quiz-intro-state" class="quiz-state active">
+          <div class="quiz-hero-card">
+            <span class="qh-icon"><i data-lucide="award"></i></span>
+            <h2>Get Certified in JavaScript Essentials</h2>
+            <p>This exam consists of 5 multiple-choice questions designed to test your mastery of DOM manipulations, array methodologies, functions, scope, and asynchronous JavaScript.</p>
+            <div class="quiz-specs">
+              <div class="spec-item"><i data-lucide="clock"></i> <span>5 Minutes Max</span></div>
+              <div class="spec-item"><i data-lucide="check-circle-2"></i> <span>80% Passing Score</span></div>
+              <div class="spec-item"><i data-lucide="award"></i> <span>Verified Certificate</span></div>
+            </div>
+            <button class="btn btn-primary btn-lg" id="quiz-start-btn">Start Certification Quiz <i data-lucide="play"></i></button>
+          </div>
+        </div>
+
+        <!-- Active Quiz State -->
+        <div id="quiz-active-state" class="quiz-state">
+          <div class="quiz-header-bar">
+            <div class="quiz-progress-bar-container">
+              <div class="quiz-progress-fill" id="quiz-progress-bar" style="width: 20%"></div>
+            </div>
+            <div class="quiz-meta-info">
+              <span class="quiz-question-number" id="quiz-q-num">Question 1 of 5</span>
+              <span class="quiz-timer" id="quiz-timer-text"><i data-lucide="clock"></i> 04:59</span>
+            </div>
+          </div>
+
+          <div class="quiz-question-card">
+            <h3 class="quiz-question-text" id="quiz-question-title">What is the difference between let and var in modern JavaScript?</h3>
+            <div class="quiz-options-list" id="quiz-options-container">
+              <!-- Options loaded dynamic -->
+            </div>
+          </div>
+
+          <div class="quiz-actions-footer">
+            <button class="btn btn-secondary" id="quiz-quit-btn">Quit Exam</button>
+            <button class="btn btn-primary" id="quiz-next-btn" disabled>Next Question <i data-lucide="arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Quiz Completion State -->
+        <div id="quiz-results-state" class="quiz-state">
+          <div class="quiz-results-card">
+            <div class="results-visual">
+              <div class="results-circle" id="results-circle">
+                <span class="results-percentage" id="results-pct">100%</span>
+              </div>
+            </div>
+            <h2 id="results-heading">Congratulations! You Passed!</h2>
+            <p id="results-desc">You scored 5 out of 5. You have proved your Javascript capabilities.</p>
+            
+            <!-- Dynamic Certificate View (Mock CSS Graphic) -->
+            <div class="certificate-mockup" id="certificate-print-area">
+              <div class="cert-border-inner">
+                <div class="cert-watermark"><i data-lucide="graduation-cap"></i></div>
+                <span class="cert-header">Certificate of Completion</span>
+                <span class="cert-sub">This is proudly presented to</span>
+                <span class="cert-recipient" id="cert-recipient-name">Alex Morgan</span>
+                <span class="cert-reason">for successfully demonstrating competency in</span>
+                <span class="cert-course" id="cert-course-name">JavaScript Essentials</span>
+                <span class="cert-date" id="cert-issue-date">Issued on June 11, 2026</span>
+                <div class="cert-signatures">
+                  <div class="cert-sig">
+                    <span class="sig-line"></span>
+                    <span class="sig-title">CEO, Learn-Ed</span>
+                  </div>
+                  <div class="cert-sig">
+                    <span class="sig-line"></span>
+                    <span class="sig-title">Director of Curriculum</span>
+                  </div>
+                </div>
+                <div class="cert-id" id="cert-id-text">Verification ID: LE-JS-93810a</div>
+              </div>
+            </div>
+
+            <div class="results-actions">
+              <button class="btn btn-primary" id="results-download-btn"><i data-lucide="download"></i> Download Certificate</button>
+              <button class="btn btn-secondary" id="results-dashboard-btn">Go to Dashboard</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#landing" class="footer-logo">
+          <span class="logo-icon"><i data-lucide="graduation-cap"></i></span>
+          <span class="logo-text">Learn-Ed</span>
+        </a>
+        <p>Premium online learning experiences empowering technology leaders of tomorrow.</p>
+        <div class="footer-social-icons">
+          <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links-grid">
+        <div class="links-col">
+          <h4>Platform</h4>
+          <a href="#courses">Courses</a>
+          <a href="#quiz">Certifications</a>
+          <a href="#dashboard">Student Profiles</a>
+          <a href="#">Learning Engine</a>
+        </div>
+        <div class="links-col">
+          <h4>Resources</h4>
+          <a href="#">Documentation</a>
+          <a href="#">Community Forum</a>
+          <a href="#">Instructor Portal</a>
+          <a href="#">Open Source Contributions</a>
+        </div>
+        <div class="links-col">
+          <h4>Contact & Support</h4>
+          <a href="#contact" id="footer-contact-link">Help Desk</a>
+          <a href="#">Security audits</a>
+          <a href="#">API Integrations</a>
+          <a href="#">Status</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Learn-Ed Inc. All rights reserved. Built with passion for excellence.</p>
+    </div>
+  </footer>
+
+  <!-- Course Preview Modal -->
+  <div class="modal-backdrop" id="course-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close modal"><i data-lucide="x"></i></button>
+      <div class="modal-banner" id="modal-banner-img"></div>
+      <div class="modal-body">
+        <div class="modal-badge-row">
+          <span class="badge" id="modal-difficulty">Intermediate</span>
+          <span class="badge" id="modal-duration">6h 15m</span>
+        </div>
+        <h2 id="modal-title">Advanced CSS Masterclass</h2>
+        <p class="modal-instructor">Instructor: <strong id="modal-instructor-name">Jane Doe</strong></p>
+        <p class="modal-description" id="modal-desc">Learn flexbox, grid, custom properties, animations, and transitions to create modern layout assets.</p>
+        
+        <div class="modal-details-grid">
+          <div class="md-item">
+            <i data-lucide="users"></i>
+            <div>
+              <span class="md-lbl">Enrolled Learners</span>
+              <span class="md-val" id="modal-enrollments">14,203</span>
+            </div>
+          </div>
+          <div class="md-item">
+            <i data-lucide="star"></i>
+            <div>
+              <span class="md-lbl">Platform Rating</span>
+              <span class="md-val" id="modal-rating">4.9/5.0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-cta-row">
+          <button class="btn btn-secondary w-full" id="modal-secondary-btn">Close</button>
+          <button class="btn btn-primary w-full" id="modal-enroll-btn">Enroll and Start Course</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Custom script hooks -->
+  <script src="app.js"></script>
+</body>
+</html>

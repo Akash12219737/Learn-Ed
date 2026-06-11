@@ -1,0 +1,22 @@
+
+    <svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#1E3A8A" />
+          <stop offset="100%" stop-color="#0F172A" />
+        </linearGradient>
+        <linearGradient id="cloudAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#60A5FA" />
+          <stop offset="100%" stop-color="#2563EB" />
+        </linearGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#cloudGrad)" />
+      
+      <path d="M 670,180 A 45,45 0 0,0 600,200 A 30,30 0 0,0 550,225 A 35,35 0 0,0 560,280 L 730,280 A 30,30 0 0,0 740,230 A 40,40 0 0,0 670,180 Z" fill="none" stroke="url(#cloudAccent)" stroke-width="4" />
+      
+      <text x="60" y="180" font-family="sans-serif" font-weight="800" font-size="44" fill="#FFF">Intro to Cloud</text>
+      <text x="60" y="240" font-family="sans-serif" font-weight="800" font-size="44" fill="url(#cloudAccent)">AWS &amp; Deployments</text>
+      <text x="60" y="300" font-family="sans-serif" font-weight="500" font-size="18" fill="#94A3B8">Level: Beginner  |  Duration: 4.2 Hours</text>
+      <text x="60" y="380" font-family="sans-serif" font-size="14" fill="#3B82F6"># Cloud infrastructures, serverless functions, SLAs</text>
+    </svg>
+  
